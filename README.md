@@ -38,6 +38,13 @@ npx mcp-remote https://muro.chat/api/mcp \
   --header "Authorization: Bearer mr_live_…"
 ```
 
+This repo also ships a tiny open-source bridge, [`index.js`](./index.js), that wraps `mcp-remote` with the muro endpoint baked in; it reads the key from the `MURO_API_KEY` environment variable. Run it from a checkout (`npm install && node index.js`) or via Docker:
+
+```bash
+docker build -t muro-mcp .
+docker run -i -e MURO_API_KEY=mr_live_... muro-mcp
+```
+
 Ready-to-paste configs for common clients are in [`examples/`](./examples):
 
 - [Claude Desktop](./examples/claude-desktop.json) (`claude_desktop_config.json`)
