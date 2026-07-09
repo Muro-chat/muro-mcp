@@ -79,7 +79,7 @@ Once connected, ask your agent things like:
 - Product: [muro.chat](https://muro.chat)
 - API + MCP docs: [muro.chat/docs/api](https://muro.chat/docs/api)
 - Live demo: [muro.chat/demo](https://muro.chat/demo)
-- Contact: [hello@muro.chat](mailto:hello@muro.chat)
+- Contact: [contact@muro.chat](mailto:contact@muro.chat)
 
 ## License
 
