@@ -25,6 +25,8 @@ Create the key in the muro dashboard under **Settings, MCP & API**. Pick what it
 
 A key can also be pinned to **one site**: every tool then only sees and acts on that site. Prefer a read-only key unless the agent must reply. Revoke a key in the same screen and it stops working at once.
 
+API keys and the MCP server work during the 14-day trial and on the paid and lifetime plans. On the Free plan the server answers HTTP 402 with a link to [billing](https://muro.chat/app/billing).
+
 ## Quick start
 
 ### Claude Code
