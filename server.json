@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "chat.muro/support",
+  "title": "muro: live chat and support inbox",
+  "description": "Live chat inbox for every site you run: read, search, reply to and triage customer conversations.",
+  "version": "1.4.0",
+  "websiteUrl": "https://muro.chat",
+  "repository": {
+    "url": "https://github.com/Muro-chat/muro-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://muro.chat/icon-512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://muro.chat/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "A muro API key (Settings > MCP & API) as a Bearer token. A read-only key is enough for every read tool.",
+          "isRequired": true,
+          "isSecret": true,
+          "value": "Bearer {api_key}",
+          "variables": {
+            "api_key": {
+              "description": "Your muro API key (mr_live_...)",
+              "isRequired": true,
+              "isSecret": true,
+              "placeholder": "mr_live_..."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

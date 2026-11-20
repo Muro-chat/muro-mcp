@@ -4,11 +4,13 @@
  *
  * The muro MCP server is a hosted Streamable HTTP endpoint
  * (https://muro.chat/api/mcp). This wrapper bridges stdio clients
- * (Claude Desktop, Windsurf, ...) to it via mcp-remote, so the whole
- * client config is: command "npx", args ["-y", "muro-mcp"], and the
- * MURO_API_KEY environment variable.
+ * (Claude Desktop, Windsurf, ...) to it via mcp-remote with an API key:
+ * command "node", args ["/path/to/muro-mcp/index.js"], and the
+ * MURO_API_KEY environment variable (or use the Docker image).
  *
- * Get an API key in the muro dashboard: https://muro.chat -> Settings -> API keys.
+ * Clients that speak Streamable HTTP (Claude Code, Cursor, VS Code) do not need
+ * this bridge: point them at https://muro.chat/api/mcp with the same header.
+ * Get an API key in the muro dashboard: https://muro.chat -> Settings -> MCP & API.
  */
 const { spawn } = require('node:child_process');
 const path = require('node:path');
@@ -17,9 +19,10 @@ const key = process.env.MURO_API_KEY;
 if (!key) {
   console.error(
     'muro-mcp: missing MURO_API_KEY.\n' +
-      'Create a key (mr_live_...) in the muro dashboard (Settings -> API keys)\n' +
+      'Create a key (mr_live_...) in the muro dashboard (Settings -> MCP & API)\n' +
       'and set it in your MCP client config, e.g.\n' +
-      '  { "command": "npx", "args": ["-y", "muro-mcp"], "env": { "MURO_API_KEY": "mr_live_..." } }\n' +
+      '  { "command": "node", "args": ["/path/to/muro-mcp/index.js"], "env": { "MURO_API_KEY": "mr_live_..." } }\n' +
+      'HTTP clients can skip this bridge: https://muro.chat/api/mcp with "Authorization: Bearer mr_live_...".\n' +
       'Docs: https://muro.chat/docs/api',
   );
   process.exit(1);

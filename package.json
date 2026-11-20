@@ -1,16 +1,20 @@
 {
   "name": "muro-mcp",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "description": "Connect any stdio MCP client to your muro.chat support inbox: conversations, replies, triage, widget config.",
   "keywords": ["mcp", "model-context-protocol", "customer-support", "live-chat", "muro"],
   "license": "MIT",
-  "homepage": "https://muro.chat/docs/api",
+  "homepage": "https://muro.chat",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Muro-chat/muro-mcp.git"
   },
   "bin": {
     "muro-mcp": "index.js"
+  },
+  "files": ["index.js", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --test"
   },
   "engines": {
     "node": ">=18"

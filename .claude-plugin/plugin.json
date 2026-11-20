@@ -1,0 +1,23 @@
+{
+  "name": "muro",
+  "version": "1.4.0",
+  "description": "Live chat inbox for every site you run: read, search, reply to and triage customer conversations, and set up chat widgets, from Claude. Needs a muro API key in MURO_API_KEY.",
+  "author": {
+    "name": "muro",
+    "email": "contact@muro.chat",
+    "url": "https://muro.chat"
+  },
+  "homepage": "https://muro.chat/docs/api#mcp",
+  "repository": "https://github.com/Muro-chat/muro-mcp",
+  "license": "MIT",
+  "keywords": ["customer-support", "live-chat", "inbox", "helpdesk", "mcp"],
+  "mcpServers": {
+    "muro": {
+      "type": "http",
+      "url": "https://muro.chat/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MURO_API_KEY}"
+      }
+    }
+  }
+}

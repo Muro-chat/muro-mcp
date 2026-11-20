@@ -1,0 +1,17 @@
+{
+  "name": "muro",
+  "displayName": "muro",
+  "version": "1.4.0",
+  "description": "Read, search, reply to and triage your customer support conversations from Cursor, and set up chat widgets on your sites. Needs a muro API key in MURO_API_KEY.",
+  "author": {
+    "name": "muro",
+    "email": "contact@muro.chat",
+    "url": "https://muro.chat"
+  },
+  "homepage": "https://muro.chat",
+  "repository": "https://github.com/Muro-chat/muro-mcp",
+  "license": "MIT",
+  "logo": "icon.png",
+  "keywords": ["customer-support", "live-chat", "inbox", "helpdesk", "mcp"],
+  "mcpServers": "mcp.json"
+}

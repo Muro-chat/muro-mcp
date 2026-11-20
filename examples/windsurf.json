@@ -2,12 +2,10 @@
   "mcpServers": {
     "muro": {
       "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://muro.chat/api/mcp",
-        "--header",
-        "Authorization: Bearer mr_live_..."
-      ]
+      "args": ["-y", "mcp-remote", "https://muro.chat/api/mcp", "--header", "Authorization:${MURO_AUTH}"],
+      "env": {
+        "MURO_AUTH": "Bearer mr_live_..."
+      }
     }
   }
 }

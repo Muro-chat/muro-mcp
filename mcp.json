@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "muro": {
+      "url": "https://muro.chat/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:MURO_API_KEY}"
+      }
+    }
+  }
+}

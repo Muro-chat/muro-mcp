@@ -3,7 +3,7 @@
     "muro": {
       "url": "https://muro.chat/api/mcp",
       "headers": {
-        "Authorization": "Bearer mr_live_..."
+        "Authorization": "Bearer ${env:MURO_API_KEY}"
       }
     }
   }
